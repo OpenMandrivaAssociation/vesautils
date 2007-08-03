@@ -1,10 +1,10 @@
 %define name vesautils
 %define version 0
 %define svn 10
-%define release %mkrel %svn.3
+%define release %mkrel %svn.4
 %define major 0
 %define libname %mklibname vbe %major
-%define libnamedev %mklibname -d svbe %major
+%define libnamedev %mklibname -d vbe
 
 Summary: Vesa BIOS extension tools
 Name: %{name}
@@ -37,6 +37,7 @@ Group:Development/C
 Summary: Vesa BIOS extension tools
 Requires: %libname = %version
 Provides: libvbe-devel = %version-%release
+Obsoletes: %mklibname -d vbe 0
 
 %description -n %libnamedev
 This is a collection of utilities and a library for handling the VESA
