@@ -16,7 +16,6 @@ Patch1: vesautils-10-get-edid-path.patch
 License: GPL
 Group: System/Configuration/Hardware
 Url: http://www.mplayerhq.hu/vesautils/index.html
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: liblrmi-devel
 ExclusiveArch: %ix86
 
