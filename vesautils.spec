@@ -1,7 +1,6 @@
 %define name vesautils
 %define version 0
 %define svn 10
-%define release %mkrel %svn.4
 %define major 0
 %define libname %mklibname vbe %major
 %define libnamedev %mklibname -d vbe
@@ -9,7 +8,7 @@
 Summary: Vesa BIOS extension tools
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: %mkrel %svn.5
 Source0: %{name}-%{svn}.tar.bz2
 Patch: vesautils-10-makefile.patch
 Patch1: vesautils-10-get-edid-path.patch
