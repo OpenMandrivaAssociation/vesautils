@@ -8,7 +8,7 @@
 Summary: Vesa BIOS extension tools
 Name: %{name}
 Version: %{version}
-Release: %mkrel %svn.5
+Release: %mkrel %svn.6
 Source0: %{name}-%{svn}.tar.bz2
 Patch: vesautils-10-makefile.patch
 Patch1: vesautils-10-get-edid-path.patch
