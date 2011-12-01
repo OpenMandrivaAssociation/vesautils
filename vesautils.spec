@@ -60,7 +60,7 @@ mkdir -p %buildroot%_libdir %buildroot%_includedir
 %makeinstall LIBDIR=%buildroot%_libdir INCDIR=%buildroot%_includedir
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %if %mdkversion < 200900
 %post -n %libname -p /sbin/ldconfig
