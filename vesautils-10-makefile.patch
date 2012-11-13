@@ -1,0 +1,27 @@
+Index: libvbe/Makefile
+===================================================================
+--- libvbe/Makefile	(Revision 10)
++++ libvbe/Makefile	(Arbeitskopie)
+@@ -37,8 +37,8 @@
+ 	ln -sf $(LIBNAME).so.$(VERSION) $(LIBDIR)/$(LIBNAME).so.$(MAJOR)
+ 	ln -sf $(LIBNAME).so.$(MAJOR) $(LIBDIR)/$(LIBNAME).so
+ 	install -m 744 -p vbe.h $(INCDIR)/vbe.h
+-	ldconfig
+ 
++
+ .PHONY: clean
+ clean:
+ 	rm -f $(objects) $(pic_objects) $(all) core
+Index: Makefile
+===================================================================
+--- Makefile	(Revision 10)
++++ Makefile	(Arbeitskopie)
+@@ -1,7 +1,7 @@
+ CFLAGS ?= -g -Wall
+ LDFLAGS = -llrmi
+ 
+-all = dosint mode3 vbemodeinfo vbetest vga_reset vbetool
++all = dosint vbemodeinfo vbetool
+ 
+ %.o: %.c
+ 	$(CC) -c $(CFLAGS) -o $@ $<

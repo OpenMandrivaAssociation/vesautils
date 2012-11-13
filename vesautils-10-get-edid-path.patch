@@ -1,0 +1,6 @@
+--- vesautils/get-edid.old	2007-06-24 15:34:40.000000000 +0200
++++ vesautils/get-edid	2007-06-24 15:34:14.000000000 +0200
+@@ -1,2 +1,2 @@
+ #!/bin/sh
+-./dosint 0x10 0x4f15 0x0001 0x80
++/usr/bin/dosint 0x10 0x4f15 0x0001 0x80
