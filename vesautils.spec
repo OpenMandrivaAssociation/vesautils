@@ -60,7 +60,7 @@ mkdir -p %buildroot%_libdir %buildroot%_includedir
 %makeinstall LIBDIR=%buildroot%_libdir INCDIR=%buildroot%_includedir
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %if %mdkversion < 200900
 %post -n %libname -p /sbin/ldconfig
@@ -82,3 +82,66 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %_libdir/libvbe.so
 %attr(644,root,root) %_includedir/vbe.h
+
+
+%changelog
+* Wed Oct 19 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.1-0.12.1mdv2012.0
++ Revision: 705427
+- newer svn snapshot
+  cleaned up spec
+  changed version to 0.1, bascally the release was being the version
+
+* Fri May 06 2011 Oden Eriksson <oeriksson@mandriva.com> 0-10.9
++ Revision: 670765
+- mass rebuild
+
+* Sat Dec 04 2010 Oden Eriksson <oeriksson@mandriva.com> 0-10.8mdv2011.0
++ Revision: 608123
+- rebuild
+
+* Wed Mar 17 2010 Oden Eriksson <oeriksson@mandriva.com> 0-10.7mdv2010.1
++ Revision: 524308
+- rebuilt for 2010.1
+
+* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 0-10.6mdv2010.0
++ Revision: 427492
+- rebuild
+
+* Mon Jun 09 2008 Pixel <pixel@mandriva.com> 0-10.5mdv2009.0
++ Revision: 217196
+- do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Wed Mar 05 2008 Oden Eriksson <oeriksson@mandriva.com> 0-10.5mdv2008.1
++ Revision: 179678
+- rebuild
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Aug 03 2007 Götz Waschk <waschk@mandriva.org> 0-10.4mdv2008.0
++ Revision: 58498
+- fix devel name
+
+* Sun Jun 24 2007 Götz Waschk <waschk@mandriva.org> 0-10.3mdv2008.0
++ Revision: 43637
+- Import vesautils
+
+
+
+* Sun Jun 24 2007 Götz Waschk <waschk@mandriva.org> 0-10.3mdv2008.0
+- fix path in get-edid (bug #31565)
+
+* Thu Aug 24 2006 Götz Waschk <waschk@mandriva.org> 0-10.3mdv2007.0
+- clean buildroot
+
+* Sun Apr 23 2006 Götz Waschk <waschk@mandriva.org> 0-10.2mdk
+- remove vbetool (already in the vbetool package
+
+* Tue Apr  4 2006 Götz Waschk <waschk@mandriva.org> 0-10.1mdk
+- this is for x86 only
+
+* Mon Apr  3 2006 Götz Waschk <waschk@mandriva.org> 0-0.10.1mdk
+- initial package
