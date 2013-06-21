@@ -1,7 +1,7 @@
 Index: libvbe/Makefile
 ===================================================================
---- libvbe/Makefile	(Revision 10)
-+++ libvbe/Makefile	(Arbeitskopie)
+--- ./libvbe/Makefile	(Revision 10)
++++ ./libvbe/Makefile	(Arbeitskopie)
 @@ -37,8 +37,8 @@
  	ln -sf $(LIBNAME).so.$(VERSION) $(LIBDIR)/$(LIBNAME).so.$(MAJOR)
  	ln -sf $(LIBNAME).so.$(MAJOR) $(LIBDIR)/$(LIBNAME).so
@@ -14,8 +14,8 @@ Index: libvbe/Makefile
  	rm -f $(objects) $(pic_objects) $(all) core
 Index: Makefile
 ===================================================================
---- Makefile	(Revision 10)
-+++ Makefile	(Arbeitskopie)
+--- ./Makefile	(Revision 10)
++++ ./Makefile	(Arbeitskopie)
 @@ -1,7 +1,7 @@
  CFLAGS ?= -g -Wall
  LDFLAGS = -llrmi
