@@ -40,7 +40,7 @@ BIOS Extension (aka VBE) with the help of LRMI under Linux and BSD.
 
 %prep
 %setup -qn %{name}
-%apply_patches
+%autopatch -p1
 
 %build
 make
