@@ -9,7 +9,7 @@ Version:	0.1
 Release:	0.%{svn}.1
 License:	GPLv2
 Group:		System/Configuration/Hardware
-Url:		http://www.mplayerhq.hu/vesautils/index.html
+Url:		https://www.mplayerhq.hu/vesautils/index.html
 Source0:	%{name}-%{svn}.tar.xz
 Patch0:		vesautils-10-makefile.patch
 Patch1:		vesautils-10-get-edid-path.patch
