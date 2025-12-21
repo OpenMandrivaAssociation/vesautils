@@ -14,6 +14,7 @@ Source0:	%{name}-%{svn}.tar.xz
 Patch0:		vesautils-10-makefile.patch
 Patch1:		vesautils-10-get-edid-path.patch
 ExclusiveArch:	%ix86
+BuildRequires:	make
 BuildRequires:	liblrmi-devel
 
 %description
